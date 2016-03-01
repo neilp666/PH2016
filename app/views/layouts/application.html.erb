@@ -10,13 +10,16 @@
 
 
   <div class="nav-container" >
-  <div class="nav-content" >
+        <div class="nav-content" >
     
       <a href="/" class="logo" > <%= image_tag("pglogo.png",  width: '150') %> </a>
 
     <div class="nav-bar-content" >
-      
-      
+        <ul>
+            <li><%= link_to "login", "/auth/twitter" %></li>
+            <li><%= link_to "Sign Out", signout_path %></li>
+        </ul>
+        
     </div>
   </div>  
 </div>

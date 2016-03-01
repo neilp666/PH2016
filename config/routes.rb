@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   root "links#index"
 
+  get 'sessions/destroy', as: :signout
+
+  match "/auth/twitter/callback", to: "sessions#create", via: :get
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
