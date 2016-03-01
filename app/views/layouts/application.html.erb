@@ -16,8 +16,12 @@
 
     <div class="nav-bar-content" >
         <ul>
+            <% if current_user %>
+             <li><%= link_to "Sign Out", signout_path %></li>
+              <% else %>
             <li><%= link_to "login", "/auth/twitter" %></li>
-            <li><%= link_to "Sign Out", signout_path %></li>
+
+            <% end %>
         </ul>
         
     </div>
