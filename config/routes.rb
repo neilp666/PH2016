@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get "/:handle", to: "profiles#show"
+
   resources :links do
     resources :comments
   end
