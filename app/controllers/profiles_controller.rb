@@ -8,5 +8,6 @@ class ProfilesController < ApplicationController
         render :show
     else
       redirect_to root_path, :flash => { :error => "That User Does not Exist" }
+    end
   end
 end
